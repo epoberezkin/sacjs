@@ -1,0 +1,23 @@
+{
+  "name": "sacjs",
+  "version": "0.0.1",
+  "description": "Set Associative Cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter=spec lib/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epoberezkin/sacjs.git"
+  },
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epoberezkin/sacjs/issues"
+  },
+  "homepage": "https://github.com/epoberezkin/sacjs",
+  "devDependencies": {
+    "chai": "^3.0.0",
+    "mocha": "^2.2.5"
+  }
+}
