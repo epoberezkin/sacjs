@@ -1,6 +1,6 @@
 {
   "name": "sacjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set Associative Cache",
   "main": "index.js",
   "scripts": {
