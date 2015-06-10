@@ -1,5 +1,5 @@
 # sacjs
-Generic n-way [Set Associative Cache]() for node.js.
+Generic n-way [Set Associative Cache](http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/set.html) for node.js.
 
 
 ## Install
@@ -22,7 +22,7 @@ cache.put(key, data);
 var data = cache.get(key);
 ```
 
-`key` used to store data in the cache can be any scalar or object/array. You can supply `serialize` option that will be used to convert keys to strings, otherwise [json-stable-stringify]() will be used. Serialized keys are hashed using [Dan Bernstein's algorythm]().
+`key` used to store data in the cache can be any scalar or object/array. You can supply `serialize` option that will be used to convert keys to strings, otherwise [json-stable-stringify](https://github.com/substack/json-stable-stringify) will be used. Serialized keys are hashed using [Dan Bernstein's algorythm](http://www.cse.yorku.ca/~oz/hash.html#djb2).
 
 
 ## Options
@@ -47,4 +47,3 @@ Cache usage statistics are available in `stat` property of the cache instance. T
 - stored - the number of items that were stored in free slots
 - replaced - the number of item that were replaced (different value for the same key)
 - evicted - the number of items that were evicted
-
