@@ -13,7 +13,7 @@ npm install sacjs
 ```
 var Cache = require('sacjs');
 
-var cache = new Cache({ assoc: 4, size: 10000, evict: 'lru' });
+var cache = new Cache({ assoc: 4, size: 10000, algorythm: 'lru' });
 
 cache.put(key, data);
 
@@ -33,7 +33,7 @@ Options object is passed to cache constructor.
 
 - size - cache size (the number of sets of slots the cache will store). The total number of items the cache can store is `assoc * size`
 
-- evict - eviction algorythm. Can be either 'lru' (least recently used), 'mru' (most recently used) or any function that will receive the set of slots as a parameter and should return the index of the item that should be evicted. Implementations of eviction algorythms are in `cache.js` and `slotset.spec.js`. For available usage statistics see `Slot` class in `slotset.js`.
+- algorythm - eviction algorythm. Can be either 'lru' (least recently used), 'mru' (most recently used), 'lfu' (least frequently used), 'mfu' (most frequently used) or an object with three functions: `created`, `accessed` (passed slot) and evict (passed the set - the hash of slots). Implementations of eviction algorythms are in `algorythms.js` and `cache.spec.js`.
 
 - serialize - custom key serialization algorythm. Should return the same string for the same key every time it is called.
 
