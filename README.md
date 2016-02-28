@@ -10,7 +10,7 @@ npm install sacjs
 
 ## Usage
 
-```
+```JavaScript
 var Cache = require('sacjs');
 
 var cache = new Cache({ assoc: 4, size: 10000, algorithm: 'lru' });
@@ -24,6 +24,10 @@ var data = cache.get(key);
 // ...
 
 cache.del(key);
+
+// ...
+
+cache.clear();
 ```
 
 `key` used to store data in the cache can be any scalar or object/array. You can supply `serialize` option that will be used to convert keys to strings, otherwise [json-stable-stringify](https://github.com/substack/json-stable-stringify) will be used. Serialized keys are hashed using [Dan Bernstein's algorithm](http://www.cse.yorku.ca/~oz/hash.html#djb2).
