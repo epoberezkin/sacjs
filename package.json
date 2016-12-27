@@ -1,6 +1,6 @@
 {
   "name": "sacjs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Set Associative Cache",
   "main": "lib/cache.js",
   "scripts": {
@@ -17,6 +17,12 @@
     "url": "https://github.com/epoberezkin/sacjs/issues"
   },
   "homepage": "https://github.com/epoberezkin/sacjs",
+  "keywords": [
+    "cache",
+    "caching",
+    "associative",
+    "set-associative-cache"
+  ],
   "devDependencies": {
     "chai": "^3.0.0",
     "coveralls": "^2.11.15",
