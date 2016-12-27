@@ -43,7 +43,7 @@ Options object is passed to cache constructor.
 
 - algorithm - eviction algorithm. Can be either 'lru' (least recently used), 'mru' (most recently used), 'lfu' (least frequently used), 'mfu' (most frequently used) or an object with three functions: `created`, `accessed` (passed slot) and evict (passed the set - the hash of slots). Implementations of eviction algorithms are in `algorithms.js` and `cache.spec.js`.
 
-- serialize - custom key serialization algorithm. Should return the same string for the same key every time it is called.
+- serialize - custom key serialization algorithm. Should return the same string for the same key every time it is called. By default, [json-stable-stringify](https://github.com/substack/json-stable-stringify) is used. Pass `false` to skip serializing (if all keys are strings or numbers).
 
 
 ## Cache statistics
