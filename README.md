@@ -1,6 +1,10 @@
 # sacjs
 Generic n-way [Set Associative Cache](http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Memory/set.html) for node.js.
 
+[![Build Status](https://travis-ci.org/epoberezkin/sacjs.svg?branch=master)](https://travis-ci.org/epoberezkin/sacjs)
+[![npm version](https://badge.fury.io/js/sacjs.svg)](https://www.npmjs.com/package/sacjs)
+[![Coverage Status](https://coveralls.io/repos/epoberezkin/sacjs/badge.svg?branch=master&service=github)](https://coveralls.io/github/epoberezkin/sacjs?branch=master)
+
 
 ## Install
 
