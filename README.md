@@ -12,6 +12,7 @@ Generic n-way [Set Associative Cache](http://www.cs.umd.edu/class/sum2003/cmsc31
 npm install sacjs
 ```
 
+
 ## Usage
 
 ```JavaScript
@@ -41,13 +42,18 @@ cache.clear();
 
 Options object is passed to cache constructor.
 
-- assoc - cache associativity level (the number of slots per set). For any given key an item can be stored in any of the slots in the set. Higher associativity improves hit ratio but reduces cache performance.
+- _assoc_ - cache associativity level (the number of slots per set). For any given key an item can be stored in any of the slots in the set. Higher associativity improves hit ratio but reduces cache performance.
 
-- size - cache size (the number of sets of slots the cache will store). The total number of items the cache can store is `assoc * size`
+- _size_ - cache size (the number of sets of slots the cache will store). The total number of items the cache can store is `assoc * size`
 
-- algorithm - eviction algorithm. Can be either 'lru' (least recently used), 'mru' (most recently used), 'lfu' (least frequently used), 'mfu' (most frequently used) or an object with three functions: `created`, `accessed` (passed slot) and evict (passed the set - the hash of slots). Implementations of eviction algorithms are in `algorithms.js` and `cache.spec.js`.
+- _algorithm_ - eviction algorithm. Can be:
+    - 'lru' (least recently used)
+    - 'mru' (most recently used)
+    - 'lfu' (least frequently used)
+    - 'mfu' (most frequently used)
+    - object with three functions: `created`, `accessed` (passed the slot) and `evict` (passed the set - the hash of slots). Implementations of eviction algorithms are in `algorithms.js` and `cache.spec.js`.
 
-- serialize - custom key serialization algorithm. Should return the same string for the same key every time it is called. By default, [json-stable-stringify](https://github.com/substack/json-stable-stringify) is used. Pass `false` to skip serializing (if all keys are strings or numbers).
+- _serialize_ - custom key serialization algorithm. Should return the same string for the same key every time it is called. By default, [json-stable-stringify](https://github.com/substack/json-stable-stringify) is used. Pass `false` to skip serializing (if all keys are strings or numbers).
 
 
 ## Cache statistics
